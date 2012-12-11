@@ -6,8 +6,8 @@
 %global php_apiver  %((echo 0; php -i 2>/dev/null | sed -n 's/^PHP API => //p') | tail -1)
 
 %global php_base php54
-%global pecl_name gearman
-%global real_name gearman
+%global pecl_name rrd
+%global real_name rrd
 
 Summary: Extension to work with rrd
 Name: %{php_base}-pecl-rrd
