@@ -21,7 +21,7 @@ URL: http://pecl.php.net/package/%{pecl_name}
 Source: http://pecl.php.net/get/%{pecl_name}-%{version}.tgz
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: %{php_base}-devel, %{php_base}-cli, %{php_base}-pear, libgearman-devel, libuuid-devel
+BuildRequires: %{php_base}-devel, %{php_base}-cli, %{php_base}-pear, libgearman-devel, libuuid-devel, rrdtool-devel
 Requires(post): %{__pecl}
 Requires(postun): %{__pecl}
 
@@ -82,7 +82,7 @@ fi
 
 %files
 %defattr(-, root, root, -)
-%doc %{pecl_name}-%{version}/README
+%doc %{pecl_name}-%{version}/CREDITS
 %config(noreplace) %{_sysconfdir}/php.d/%{pecl_name}.ini
 %{php_extdir}/%{pecl_name}.so
 %{pecl_xmldir}/%{pecl_name}.xml
